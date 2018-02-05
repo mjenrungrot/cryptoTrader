@@ -20,13 +20,22 @@
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home", "/" %></li>
             <li><%= link_to "Help", "/static_pages/help" %></li>
-            <li><%= link_to "About", "/static_pages/about" %></li>
           </ul>
         </nav>
       </div>
     </header>
     <div class="container">
-     <%= yield %>
+      <%= yield %>
+      <footer class="footer">
+        <small>
+          The CryptoTrader Application by Teerapat Jenrungrot
+        </small>
+        <nav>
+          <ul>
+            <li><%= link_to "About",   '/static_pages/about' %></li>
+          </ul>
+        </nav>
+      </footer>
     </div>
   </body>
 </html>
