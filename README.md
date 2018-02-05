@@ -7,7 +7,14 @@ Summary
 -------
 
 *CryptoTrader* is a simple Rails application that allows users to trade Bitcoin
-in simulation using the real-time prices. The prices of Bitcoin will be pulled
+in simulation using the real-time prices. The current price of Bitcoin will be taken
+from Coindesk (https://www.coindesk.com/) via an external API. Users 
+
+Registered users are able 
+to login to the application 
+
+
+The prices of Bitcoin will be pulled
 from other online sources via an external API. This application is able to track
 prices in real time, and users are able to keep their own portfolio within our
 application. Each registered user starts with a money of \$1,000,000. For the
@@ -55,8 +62,8 @@ Issues
 References
 ----------
 
--   <https://www.coindesk.com/api/>
-
+- <https://www.coindesk.com/api/>
+- <https://ruby-doc.org/stdlib-2.4.2/libdoc/net/http/rdoc/Net/HTTP.html>
  
 
 Contributors
