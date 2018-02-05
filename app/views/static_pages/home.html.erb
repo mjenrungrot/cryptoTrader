@@ -3,4 +3,9 @@
 <p>
   This is the CryptoTrader App developed in Ruby on Rails.
 </p>
-
+<p> Time:
+<%= @responseValue["time"]["updatedISO"] %>
+</p>
+<p> Price in USD:  
+<%= @responseValue["bpi"]["USD"]["rate"] %>
+</p>
