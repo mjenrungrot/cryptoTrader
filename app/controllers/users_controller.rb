@@ -14,13 +14,18 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to CryptoTrader!"
 
       # Create allocation for USD and BTC for user
-      @user.portfolio.build(user_id: @user.id, currency: "BTC", amount: 0.0)
-      @user.portfolio.build(user_id: @user.id, currency: "USD", amount: 1000000.0)
-     
+      portfolio_btc = Portfolio.new(user_id: @user.id, currency: "BTC", amount: 0.0)
+      portfolio_btc.save
+      portfolio_usd = Portfolio.new(user_id: @user.id, currency: "USD", amount: 1000000.0)
+      portfolio_usd.save
+
       redirect_to @user
     else
       render 'new'
     end
+  end
+
+  def portfolio 
   end
 
   private
