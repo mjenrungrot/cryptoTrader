@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180206182804) do
+ActiveRecord::Schema.define(version: 20180206220844) do
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "from_symbol"
+    t.string "to_symbol"
+    t.decimal "amount", precision: 15, scale: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
 
   create_table "portfolios", force: :cascade do |t|
     t.integer "user_id"

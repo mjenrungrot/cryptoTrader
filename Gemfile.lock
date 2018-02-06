@@ -74,7 +74,7 @@ GEM
     crass (1.0.3)
     erubi (1.7.0)
     execjs (2.7.0)
-    ffi (1.9.19)
+    ffi (1.9.21)
     formatador (0.2.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
