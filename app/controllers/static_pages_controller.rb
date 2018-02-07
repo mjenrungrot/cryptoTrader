@@ -12,7 +12,6 @@ class StaticPagesController < ApplicationController
     response = http.request(request)
     
     @responseValue = JSON.parse(response.body)
-    p @responseValue
   end
 
   def help
