@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
+  # orders
+  get '/order',     to: 'orders#new'
+  post '/order',    to: 'orders#create'
+
   # sessions 
   get '/login',     to: 'sessions#new'
   post '/login',    to: 'sessions#create'

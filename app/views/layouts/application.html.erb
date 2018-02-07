@@ -42,21 +42,6 @@
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
       <% end %>
       <%= yield %>
-      <div class="panel-group">
-        <div class="panel panel-success">
-          <div class="panel-heading">Trader</div>
-          <div class="panel-body">
-            Currently, you have
-            <ul>
-              <li><%= current_user.portfolio.find_by_currency("USD").amount if current_user && current_user.portfolio.find_by_currency("USD") %> USD</li>
-              <li><%= current_user.portfolio.find_by_currency("BTC").amount if current_user && current_user.portfolio.find_by_currency("BTC") %> BTC</li>
-            </ul>
-            This is going to be trader
-
-
-          </div>
-        </div>
-      </div>
 
       <footer class="footer">
         <small>
