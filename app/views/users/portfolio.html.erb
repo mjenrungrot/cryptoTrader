@@ -1,4 +1,4 @@
-<% provide(:title, "Portfolio") %>
+<% provide(:title, "Portfolio and Order History") %>
 
 <h1>Portfolio</h1>
 <div class="table-responsive">
@@ -14,6 +14,28 @@
       <% current_user.portfolio.each do |portfolio_entry| %>
       <tr>
         <% portfolio_entry.attributes.each do |attribute, value| %>
+        <td><%= value %></td>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<h1>Order History</h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <% Order.where(user_id: current_user.id).first.attributes.each do |attribute, value| %>
+        <th><%= attribute %></th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% Order.where(user_id: current_user.id).each do |order| %>
+      <tr>
+        <% order.attributes.each do |attribute, value| %>
         <td><%= value %></td>
         <% end %>
       </tr>
