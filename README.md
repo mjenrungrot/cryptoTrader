@@ -40,9 +40,12 @@ Functionality
 
 *CryptoTrader* is an application that allows users to exchange Bitcoin (BTC) with US Dollars (USD). The application has these following core functionalities:
 - __Signup/Login__ - Users are able to signup with email and password and use these credentials to login to the application. Each registered user starts with 1,000,000 USD. 
+![Signup](https://image.ibb.co/dVYVvn/signup.png)
 - __Order history__ - Users are able to look at their own history of executed orders. 
 - __Portfolio__ - Users are able to look at the USD and BTC allocations they currently have.
+![Order](https://preview.ibb.co/czaSan/order.png)
 - __Trader__ - Users are able to trade between USD and BTC using a simple HTTP POST request. The trader also has a validator that validates if the order is valid (e.g. checking if users have enough USD or BTC).
+![Trader](https://preview.ibb.co/kS5h87/trader.png)
 
 Installations
 -------------
